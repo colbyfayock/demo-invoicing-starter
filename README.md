@@ -10,6 +10,24 @@
 
 ## Getting Started
 
+To get started, create a new local instance of the project:
+
+```
+npx create-next-app@latest -e https://github.com/colbyfayock/demo-invoicing-starter my-invoices
+```
+
+This will clone the project locally, install dependencies, and reset Git history.
+
+Once ready, navigate into your new directory and run:
+
+```
+npm run dev
+```
+
+And your app will be up and running at http://localhost:3000!
+
+In order for it to actually work, follow along with the Clerk and Neon setup below.
+
 ### Setting Up Clerk
 
 Clerk is used as the authentication layer of the application, which allows
