@@ -5,7 +5,7 @@ A full-stack Next.js invoicing demo where Clerk-authenticated users manage invoi
 ## Use this template
 
 ```bash
-
+npx create-next-app -e https://github.com/colbyfayock/demo-invoicing-starter
 ```
 
 ## Local setup
