@@ -1,39 +1,35 @@
 # Demo Invoice App Starter
 
-A full-stack Next.js invoicing demo where Clerk-authenticated users manage invoices stored per user in Neon Postgres through Drizzle.
+A full-stack Next.js invoicing app with Clerk authentication and per-user invoices stored in Neon Postgres through Drizzle.
 
-## Use this template
+## Getting Started
+
+- Set up a new project
 
 ```bash
-npx create-next-app -e https://github.com/colbyfayock/demo-invoicing-starter
+npx create-next-app my-invoicing -e https://github.com/colbyfayock/demo-invoicing-starter
 ```
 
-## Local setup
+- Navigate to your new project
 
-Install dependencies, then create a Clerk application and a Neon Postgres database:
+```bash
+cd my-invoicing
+```
+
+- Install dependencies
 
 ```bash
 npm install
 ```
 
-Set these values in `.env.local`:
-
-```dotenv
-NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=<Clerk publishable key>
-CLERK_SECRET_KEY=<Clerk secret key>
-DATABASE_URL=<Neon Postgres connection string>
-# Optional, for the Clerk webhook endpoint
-CLERK_WEBHOOK_SECRET=<Clerk webhook signing secret>
-```
-
-The Drizzle configuration loads `.env`; make `DATABASE_URL` available there or in the shell before running migrations:
+- Configure Clerk and Neon credentials in `.env.local` (`NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY`, `CLERK_SECRET_KEY`, and `DATABASE_URL`; `CLERK_WEBHOOK_SECRET` is optional for the Clerk webhook endpoint). Then run the database migrations:
 
 ```bash
 npx drizzle-kit generate
 npx drizzle-kit push
 ```
 
-Start the development server:
+- Start the development server
 
 ```bash
 npm run dev
